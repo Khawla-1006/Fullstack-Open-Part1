@@ -5,3 +5,6 @@
 ### *Submissions to Part1*
 ---
 * Exercises 1.1 & 1.2 
+* Exercises 1.3 --> 1.5
+
+CourseInfo App fully finishied within **exercise 1.5** .
