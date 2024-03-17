@@ -2,7 +2,7 @@
 
 ## FULLSTACK OPEN course:
 
-### *Submissions to Part1*
+### *Submissions to Part1 CourseInfo App*
 ---
 * Exercises 1.1 & 1.2 
 * Exercises 1.3 --> 1.5
