@@ -37,6 +37,14 @@ const Statistics = (props) =>{
   )
 }
 
+const Display = (props) =>{
+    if(props.allFeedbacks === 0){
+      return <p>No feedback given</p>
+    }else{
+      return <Statistics />
+    }
+}
+
 
 
 const App = () => {
@@ -71,16 +79,6 @@ const App = () => {
     }
   }
 
-  const display = () =>{
-    if(all === 0){
-      return <p>No feedback given</p>
-    }else{
-      return <Statistics />
-    }
-  }
-
-
-
   return (
     <div>
 
@@ -92,7 +90,7 @@ const App = () => {
     />
 
       <h1>Statistics</h1>
-      {display()}
+      <Display allFeedbacks= {all} />
     <Statistics 
     goodFeeds = {good}
     badFeeds = {bad}
