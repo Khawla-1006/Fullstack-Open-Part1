@@ -1,17 +1,42 @@
 import { useState } from 'react'
 
-const Button = (props) =>{
+const FeedSubmission = (props) =>{
   return <button onClick={props.handleClick}>{props.text}</button>
 }
 
-const Statistics = (props) =>{
+const Button = (props) =>{
+  return (
+    <>
+    <FeedSubmission text = 'good' handleClick = {props.handleGoodSubmit} />
+    <FeedSubmission text = 'neutral' handleClick = {props.handleNeutralSubmit} />
+    <FeedSubmission text = 'bad' handleClick = {props.handleBadSubmit} />
+    </>
+  )
+}
+
+const StatisticLine = (props) =>{
+  console.log(props.value)
   if(!props.value){
     return;
   }else{
     return <p>{props.text} {props.value}</p>
-
   }
 }
+
+const Statistics = (props) =>{
+  console.log(props)
+  return(
+    <>
+    <StatisticLine text="good" value={props.goodFeeds} />
+    <StatisticLine text="neutral" value={props.neutralFeeds} />
+    <StatisticLine text="bad" value={props.badFeeds} />
+    <StatisticLine text="all" value={props.allFeeds} />
+    <StatisticLine text="average" value={props.average} />
+    <StatisticLine text="positive" value={props.positiveFeeds} />
+    </>
+  )
+}
+
 
 
 const App = () => {
@@ -60,18 +85,22 @@ const App = () => {
     <div>
 
       <h1>Give feedback</h1>
-    <Button handleClick={handleGood} text="good" />
-    <Button handleClick={handleBad} text="bad" />
-    <Button handleClick={handleNeutral} text="neutral" />
+    <Button 
+    handleGoodSubmit = {handleGood}
+    handleNeutralSubmit = {handleNeutral}
+    handleBadSubmit = {handleBad} 
+    />
 
       <h1>Statistics</h1>
       {display()}
-    <Statistics text='good' value={good} />
-    <Statistics text='bad' value={bad} />
-    <Statistics text='neutral' value={neutral} />
-    <Statistics text='all' value={all} />
-    <Statistics text='average' value={average()} />
-    <Statistics text='positive' value={positiveFeed()} />
+    <Statistics 
+    goodFeeds = {good}
+    badFeeds = {bad}
+    neutralFeeds = {neutral}
+    allFeeds = {all}
+    average = {average()} 
+    positiveFeeds = {positiveFeed()}
+    />
     </div>
   )
 }
