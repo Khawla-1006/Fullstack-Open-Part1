@@ -19,7 +19,12 @@ const StatisticLine = (props) =>{
   if(!props.value){
     return;
   }else{
-    return <p>{props.text} {props.value}</p>
+    return (
+          <tr>
+            <td>{props.text}</td>
+            <td>{props.value}</td>
+          </tr> 
+    )
   }
 }
 
@@ -27,12 +32,16 @@ const Statistics = (props) =>{
   console.log(props)
   return(
     <>
-    <StatisticLine text="good" value={props.goodFeeds} />
-    <StatisticLine text="neutral" value={props.neutralFeeds} />
-    <StatisticLine text="bad" value={props.badFeeds} />
-    <StatisticLine text="all" value={props.allFeeds} />
-    <StatisticLine text="average" value={props.average} />
-    <StatisticLine text="positive" value={props.positiveFeeds} />
+    <table>
+      <tbody>
+        <StatisticLine text="good" value={props.goodFeeds} />
+        <StatisticLine text="neutral" value={props.neutralFeeds} />
+        <StatisticLine text="bad" value={props.badFeeds} />
+        <StatisticLine text="all" value={props.allFeeds} />
+        <StatisticLine text="average" value={props.average} />
+        <StatisticLine text="positive" value={props.positiveFeeds} /> 
+     </tbody>
+    </table>
     </>
   )
 }
