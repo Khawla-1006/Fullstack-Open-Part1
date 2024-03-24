@@ -18,7 +18,6 @@ const App = () => {
   const getRandom = () =>{
     let randomNumber = Math.floor(Math.random() * anecdotes.length)
      setSelected(randomNumber)
-     console.log(anecdotes[selected])
   }
 
   const countVotes = () =>{
