@@ -1,8 +1,9 @@
-# React + Vite
+# University of HELSINKI 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## FULLSTACK OPEN course:
 
-Currently, two official plugins are available:
+### *Submissions to Part1 Anecdote App*
+---
+* Exercises 1.12 --> 1.14
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Anecdote App fully finishied within **exercise 1.14** .
